@@ -1,4 +1,4 @@
-# ILOVEYOU
+# OUTLOOK WORM
 
 > **ILOVEYOU**, sometimes referred to as **Love Bug** or **Love Letter**, was a
 > [computer worm](https://en.wikipedia.org/wiki/Computer_worm) that attacked tens of millions of [Windows](https://en.wikipedia.org/wiki/Microsoft_Windows) personal computers on
@@ -8,8 +8,7 @@
 >
 > — Wikipedia, [ILOVEYOU](https://en.wikipedia.org/wiki/ILOVEYOU)
 
-This is a formatted version of the **ILOVEYOU** worm also known as **Love Letter**. It includes comments which explains the routines that are used by
-the worm to infect and spread itself.
+This is based on the **ILOVEYOU** worm also known as **Love Letter**. It is called **OUTLOOKWORM**.
 
 ## Disclaimer
 
